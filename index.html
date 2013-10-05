@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app="makeADeal">
 
 <head>
   <title>Choose Wisely!</title>
@@ -9,16 +9,17 @@
   <script type="text/javascript" src='js/bootstrap.min.js'></script>
   <script type="text/javascript" src='js/angular.min.js'></script>
   <script type="text/javascript" src='js/controllers.js'></script>
+  <script type="text/javascript" src='js/modules.js'></script>
 </head>
 
-<body ng-controller="">
+<body ng-controller="DealController" ng-init="init();">
   <div class='container'>
   <h2>Let's Make a Deal</h2>
   <p class='lead instructions'>One of these doors contains something AWESOME, but the other two contain a terrible, hideous thing.  <br>Please pick one</p>
     <div class='row'>
-      <div class="col-md-2 col-md-offset-3"><img class='door' src="img/door1.png"></div>
-      <div class="col-md-2"><img class='door' src="img/door2.png"></div>
-      <div class="col-md-2"><img class='door' src="img/door3.png"></div>
+      <div id='door1'class="col-md-2 col-md-offset-3"><img class='door' src="img/door1.png" ng-mouseover="pulse($event);"></div>
+      <div id='door2' class="col-md-2"><img class='door' src="img/door2.png"></div>
+      <div id='door3' class="col-md-2"><img class='door' src="img/door3.png"></div>
     </div>
     <!-- row -->
   </div>
