@@ -1,56 +1,24 @@
-<!doctype html>
-<html lang='en' ng-app>
+<!DOCTYPE html>
+<html lang='en'>
 
 <head>
   <title>Choose Wisely!</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/calc.css">
+  <link rel="stylesheet" type="text/css" href="css/deal.css">
   <script type="text/javascript" src='js/jquery.js'></script>
   <script type="text/javascript" src='js/bootstrap.min.js'></script>
   <script type="text/javascript" src='js/angular.min.js'></script>
   <script type="text/javascript" src='js/controllers.js'></script>
 </head>
 
-<body ng-controller="CalculatorController" ng-keyup='keyup($event)'>
+<body ng-controller="">
   <div class='container'>
+  <h2>Let's Make a Deal</h2>
+  <p class='lead instructions'>One of these doors contains something AWESOME, but the other two contain a terrible, hideous thing.  <br>Please pick one</p>
     <div class='row'>
-      <table id='calc' class='table'>
-        <tbody>
-          <tr>
-            <td class='btn btn-success' ng-click='build($event)'>7</td>
-            <td class='btn btn-success' ng-click='build($event)'>8</td>
-            <td class='btn btn-success' ng-click='build($event)'>9</td>
-            <td class='btn btn-success' ng-click='build($event)'>+</td>
-          </tr>
-          <tr>
-            <td class='btn btn-success' ng-click='build($event)'>4</td>
-            <td class='btn btn-success' ng-click='build($event)'>5</td>
-            <td class='btn btn-success' ng-click='build($event)'>6</td>
-            <td class='btn btn-success' ng-click='build($event)'>-</td>
-          </tr>
-          <tr>
-            <td class='btn btn-success' ng-click='build($event)'>1</td>
-            <td class='btn btn-success' ng-click='build($event)'>2</td>
-            <td class='btn btn-success' ng-click='build($event)'>3</td>
-            <td class='btn btn-success' ng-click='build($event)'>*</td>
-          </tr>
-          <tr>
-            <td class='btn btn-success' ng-click='build($event)'>0</td>
-            <td class='btn btn-success' ng-click='execute()'>=</td>
-            <td class="btn btn-success" ng-click='clear()'>C</td>
-            <td class='btn btn-success' ng-click='build($event)'>/</td>
-            <td class='btn btn-success' ng-click='build($event)'>(</td>
-            <td class='btn btn-success' ng-click='build($event)'>)</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class='row'>
-        <div class="col-lg-8 col-lg-offset-2">
-          <div id='result'>
-            <div id='result-container'>{{ result }}</div>
-          </div>
-        </div>
-      </div>
+      <div class="col-md-2 col-md-offset-3"><img class='door' src="img/door1.png"></div>
+      <div class="col-md-2"><img class='door' src="img/door2.png"></div>
+      <div class="col-md-2"><img class='door' src="img/door3.png"></div>
     </div>
     <!-- row -->
   </div>
