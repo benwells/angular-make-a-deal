@@ -17,9 +17,14 @@
   <h2>Let's Make a Deal</h2>
   <p class='lead instructions'>One of these doors contains something AWESOME, but the other two contain a terrible, hideous thing.  <br>Please pick one</p>
     <div class='row'>
-      <div id='door1'class="col-md-2 col-md-offset-3"><img class='door' src="img/door1.png" ng-mouseover="pulse($event);"></div>
+
+      <div ng-repeat='door in doors' class="col-md-2" ng-class="{'col-md-offset-3': $index == 0,pulse: hovered == door}">
+        <img class='dr' src="{{door.path}}door{{door.ind}}{{door.ext}}" ng-mouseover="hov(door);">
+      </div>
+      <!-- <div ng-repeat'door in doors' class="col-md-2 col-md-offset-3"></div> -->
+     <!--  <div id='door1'class="col-md-2 col-md-offset-3"><img class='door' src="img/door1.png" ng-mouseover="pulse($event);"></div>
       <div id='door2' class="col-md-2"><img class='door' src="img/door2.png"></div>
-      <div id='door3' class="col-md-2"><img class='door' src="img/door3.png"></div>
+      <div id='door3' class="col-md-2"><img class='door' src="img/door3.png"></div>-->
     </div>
     <!-- row -->
   </div>
