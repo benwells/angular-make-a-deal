@@ -28,4 +28,10 @@ function DealController ($scope) {
   $scope.hov = function(item) {
     $scope.hovered = item;
   }
+
+  $scope.clickHandler = function(item){
+    item.clicked = true;
+    // $scope.doors[item.ind -1].clicked = true;
+    console.log(item.ind)
+  }
 }
